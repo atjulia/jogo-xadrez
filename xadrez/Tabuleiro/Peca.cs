@@ -19,8 +19,6 @@ namespace tabuleiro
             this.qtdMovimentos = 0;
         }
 
-        public abstract bool[,] movimentosPossiveis();
-
         public Peca(Tabuleiro tab, Cor cor)
         {
             this.tab = tab;
@@ -50,9 +48,11 @@ namespace tabuleiro
             }
             return false;
         }
-        public bool podeMoverPara(Posicao pos)
+        public bool movimentoPossivel(Posicao pos)
         {
             return movimentosPossiveis()[pos.linha, pos.coluna];
         }
+
+        public abstract bool[,] movimentosPossiveis();
     }
 }
