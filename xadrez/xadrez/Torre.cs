@@ -42,7 +42,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.coluna = pos.coluna - 1;
+                pos.coluna = pos.coluna + 1;
             }
             // abaixo
             pos.definirValores(posicao.linha + 1, posicao.coluna);
